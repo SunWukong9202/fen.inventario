@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<x-layouts.base>
+    <x-navigation.navbar></x-navigation>
+    <x-navigation.sidebar></x-navigation>
+    <main class="lg:ml-72 h-auto pt-14 lg:pt-0">
+        <div class="w-full px-6 py-6 mx-auto">
+            {{ $slot }}
+        </div>
+    </main>
 
-        <title>{{ $title ?? 'Inventario FEN' }}</title>
-        @livewireStyles
-        @vite(['resources/js/app.js', 'resources/css/app.css'])
-    </head>
-    <body>
-        {{ $slot }}
-
-        @livewireScriptConfig
-    </body>
-</html>
+    {{-- <main class="ease-soft-in-out lg:ml-64 h-auto max-h-screen rounded-xl transition-all duration-200 ">
+        <x-navigation.navbar></x-navigation>
+        <div class="w-full px-6 py-6 mx-auto">
+            {{ $slot }}
+        </div>
+    </main> --}}
+</x-layouts>

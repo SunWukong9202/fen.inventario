@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+[fen-scrollbar] {
+  @apply overflow-auto;
+}
+
+[fen-scrollbar]::-webkit-scrollbar {
+  @apply w-[10px] h-1;
+}
+
+[fen-scrollbar]::-webkit-scrollbar-thumb {
+  @apply bg-gray-200 rounded;
+}
+
+[fen-scrollbar]::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-300 !important;
+}
